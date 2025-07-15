@@ -18,7 +18,36 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Open Sans', 'sans-serif'],
+				heading: ['Montserrat', 'sans-serif'],
+			},
 			colors: {
+				// Эко-цвета для маслоделия
+				green: {
+					50: '#F2FCE2',
+					100: '#E5F8C5',
+					200: '#C8F08F',
+					300: '#A3E354',
+					400: '#7DD321',
+					500: '#65A30D',
+					600: '#4F7A08',
+					700: '#2D5016',
+					800: '#365314',
+					900: '#1A2E05',
+				},
+				amber: {
+					50: '#FEF7CD',
+					100: '#FEF08A',
+					200: '#FDE047',
+					300: '#FACC15',
+					400: '#EAB308',
+					500: '#CA8A04',
+					600: '#A16207',
+					700: '#854D0E',
+					800: '#713F12',
+					900: '#422006',
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -88,7 +117,19 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'scale-in': 'scale-in 0.2s ease-out'
+			},
+			keyframes: {
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'scale-in': {
+					'0%': { transform: 'scale(0.95)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				}
 			}
 		}
 	},
